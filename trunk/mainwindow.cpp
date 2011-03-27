@@ -482,18 +482,28 @@ void MainWindow::on_pushButton_10_clicked()
 
 
 
-/*
-void MainWindow::on_comboBox_2_textChanged(){
 
-QMessageBox msgBox;
+void MainWindow::start_routine(void *arg){
+    while (1){
+    system("ls");
+    }
+}
 
-msgBox.setText("holahola");
-msgBox.addButton("fuera",QMessageBox::AcceptRole);
-msgBox.exec();
-}*/
+void MainWindow::on_pushButton_11_clicked()
+{
+
+    /* default behavior*/
+    //ret = pthread_create(&tid, NULL, MainWindow::start_routine*, arg);
+
+    /* initialized with default attributes */
+    //ret = pthread_attr_init(&tattr);
+    /* default behavior specified*/
+    //ret = pthread_create(&tid, &tattr, start_routine, arg);
+}
 
 void MainWindow::on_comboBox_2_activated(QString )
 {
+
     string monInter[20]="";
     int i=0;
     if (ui->comboBox_2->itemText(0) == "") {
@@ -590,21 +600,4 @@ void MainWindow::on_comboBox_2_activated(QString )
                 interValida=false;
             }
     }
-}
-void MainWindow::start_routine(void *arg){
-    while (1){
-    system("ls");
-    }
-}
-
-void MainWindow::on_pushButton_11_clicked()
-{
-
-    /* default behavior*/
-    //ret = pthread_create(&tid, NULL, MainWindow::start_routine*, arg);
-
-    /* initialized with default attributes */
-    //ret = pthread_attr_init(&tattr);
-    /* default behavior specified*/
-    //ret = pthread_create(&tid, &tattr, start_routine, arg);
 }
