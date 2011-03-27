@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'mainwindow.h'
 **
-** Created: Sat Mar 26 13:15:31 2011
+** Created: Sun Mar 27 13:17:12 2011
 **      by: The Qt Meta Object Compiler version 62 (Qt 4.7.1)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -121,6 +121,8 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 9: on_tableWidget_itemClicked((*reinterpret_cast< QTableWidgetItem*(*)>(_a[1]))); break;
         case 10: on_pushButton_2_clicked(); break;
         case 11: on_pushButton_clicked(); break;
+
+        case 14: on_comboBox_2_activated((*reinterpret_cast< QString(*)>(_a[1]))); break;
 
         case 19: on_pushButton_11_clicked(); break;
         case 20: start_routine((*reinterpret_cast< void*(*)>(_a[1]))); break;
